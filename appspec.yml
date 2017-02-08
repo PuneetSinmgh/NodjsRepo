@@ -1,0 +1,49 @@
+
+os: linux 
+# os: windows
+
+files:
+  - source: 
+    destination:
+  - source:
+    destination:
+
+permissions:
+  - object:
+    pattern:
+    except:
+    owner:
+    group:
+    mode: 
+    acls:
+      -
+    context:
+      user:
+      type:
+      range:
+    type:
+      -
+# If you are not running any commands on the Amazon EC2 instance, then remove 
+#   the "hooks" section altogether. A blank or incomplete "hooks" section
+#   may cause associated deployments to fail.
+hooks:
+ 
+# During the BeforeInstall deployment lifecycle event, run the commands 
+# in the script specified in "location".
+  BeforeInstall:
+    - location: 
+      timeout:
+      runas: 
+    - location: 
+      timeout:
+      runas:
+
+# During the ApplicationInstall deployment lifecycle event, run the commands 
+#   in the script specified in "location".
+  ApplicationStart:
+    - location:     
+      timeout: 
+      runas:
+    - location: 
+      timeout:
+      runas:
