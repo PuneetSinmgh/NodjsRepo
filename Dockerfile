@@ -1,3 +1,5 @@
-FROM ubuntu
-RUN apt-get update
-RUN apt-get install -y node
+FROM node
+COPY . /tmp/
+WORKDIR /tmp/
+RUN node -v
+RUN gulp -v
